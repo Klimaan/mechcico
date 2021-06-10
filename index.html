@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechcico</title>
+    <!----- CSS ----->
+    <link rel="stylesheet" href="css/style.css">
+    <!----- JS ----->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script type="text/javascript" src="../database/data_GDU.js"></script>
+    <script type="module" src="database/database.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="img/Logo-vzw-klimaan.png">
+        <!--<h1>Je toestel behouden of vernieuwen?</h1>-->
+    </header>
+
+    <div id="sectionOne">
+        <div class="info">
+            <h2>Wat is het beste voor je portemonnee en het klimaat?</h2>
+            <p>Vergelijk hier de impact van verschillende toestellen. De basisgegevens komen uit een databank, maar je
+                kan alle gegevens overal naar eigen wens en situatie aanpassen voor een correcte vergelijking.</p>
+        </div>
+        <div class="settings">
+            <h2>Instellingen</h2>
+            <div class="option">
+                <label>Kostprijs elektriciteit <br><span>(in €/kWh)</span></label>
+                <input type="number" step="0.01" class="price_kwh" value="0.2548"></input>
+            </div>
+            <div class="option">
+                <label>klimaatimpact van elektriciteit <br><span>(in kg CO2 eq.)</span></label>
+                <input type="number" step="0.01" class="co2_consumption" value="0.26"></input>
+            </div>
+            <div class="option">
+                <label>Analysetermijn <br><span>(in jaar)</span></label>
+                <input type="number" step="0.01" class="period" value="10"></input>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionTwo">
+        <div id="wrapper_grid">
+            <!-- Select the machine to compare -->
+            <div class="comparison_select-group-grid">
+                <div class="comparison_select_machine">
+                    <label for="machine">Wat wil je vergelijken?</label>
+                    <select class="machine" name="machine">
+                        <option selected disabled>Selecteer een optie</option>
+                        <!-- Added with js from DB -->
+                    </select>
+                </div>
+                <div class="comparison_amount_machines">
+                    <label for="amount_machines">Aantal toestellen: </label>
+                    <input min="1" class="amount_machines" name="amount_machines" type="number" value="1" />
+                </div>
+            </div>
+            <div class="seporator upper_seporator">
+                <hr />
+            </div>
+
+
+            <div class="label_price_wrapper">
+                <label class="label_price">Kostprijs toestel <br><span>(in €)</span></label>
+            </div>
+            <div class="label_age_wrapper">
+                <label class="label_age">Ouderdom toestel <br><span>(in jaar)</span></label>
+            </div>
+            <div class="label_lifespan_wrapper">
+                <label class="label_lifespan">Levensduur <br><span>(in jaar)</span></label>
+            </div>
+
+            <div class="label_wattage_wrapper">
+                <label class="label_wattage">Vermogen <br><span>(in Watt)</span></label>
+            </div>
+            <div class="label_daily_usage_wrapper">
+                <label class="label_daily_usage">Gebruik <br><span>(in uur/dag)</span></label>
+            </div>
+            <div class="label_kwh_wrapper">
+                <label class="label_kwh">Jaarlijks verbruik <br><span>(in kWh)</span></label>
+            </div>
+
+            <!-- Select the current situation -->
+            <div class="select_current">
+                <div class="select_current_situation">
+                    <label for="current_situation" class="label_current_situation">Huidige situatie</label>
+                    <select disabled class="current_situation" name="current_situation">
+                        <option selected disabled>Selecteer een optie</option>
+                        <!-- Fill in by loop from "DB" -->
+
+                    </select>
+                </div>
+
+                <div class="input_current_price_wrapper">
+                    <label class="label_current_price">Kostprijs toestel <br><span>(in €)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="current_price" class="current_install current_price" />
+                </div>
+                <div class="input_current_age_wrapper">
+                    <label class="label_current_age">Ouderdom toestel <br><span>(in jaar)</span></label>
+                    <input disabled step="0.1" min="0" type="number" name="current_age" class="current_install current_age" />
+                </div>
+                <div class="input_current_lifespan_wrapper">
+                    <label class="label_current_lifespan">Levensduur <br><span>(in jaar)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="current_lifespan" class="current_install current_lifespan" />
+                </div>
+
+                <div class="input_current_wattage_wrapper">
+                    <label class="label_current_wattage">Vermogen <br><span>(in Watt)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="current_power" class="current_install current_power" />
+                </div>
+                <div class="input_current_usage_wrapper">
+                    <label class="label_current_daily_usage">Gebruik <br><span>(in uur/dag)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="current_use_day" class="current_install current_use_day" />
+                </div>
+                <div class="input_current_kwh_wrapper">
+                    <label class="label_current_kwh">Jaarlijks verbruik <br><span>(in kWh)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="current_use_year" class="current_use_year" />
+                </div>
+            </div>
+
+            <div class="seporator lower_seporator">
+                <hr />
+            </div>
+
+            <!-- Select the new situation -->
+            <div class="select_new">
+                <div class="select_new_situation">
+                    <label for="new_situation" class="label_new_situation">Nieuwe situatie</label>
+                    <select disabled class="new_situation" name="new_situation">
+                        <option selected disabled>Selecteer een optie</option>
+                        <!-- Fill in by loop from "DB" -->
+                    </select>
+                </div>
+
+                <div class="input_new_price_wrapper">
+                    <label class="label_new_price">Kostprijs toestel <br><span>(in €)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="new_price" class="new_install new_price" />
+                </div>
+                <div class="input_new_age_wrapper">
+                    <label class="label_new_age">Ouderdom toestel <br><span>(in jaar)</span></label>
+                    <input disabled step="0.1" min="0" type="number" name="new_age" class="new_install new_age" />
+                </div>
+                <div class="input_new_lifespan_wrapper">
+                    <label class="label_new_lifespan">Levensduur <br><span>(in jaar)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="new_lifespan" class="new_install new_lifespan" />
+                </div>
+
+                <div class="input_new_wattage_wrapper">
+                    <label class="label_new_wattage">Vermogen <br><span>(in Watt)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="new_power" class="new_install new_power" />
+                </div>
+                <div class="input_new_usage_wrapper">
+                    <label class="label_new_daily_usage">Gebruik <br><span>(in uur/dag)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="new_use_day" class="new_install new_use_day" />
+                </div>
+                <div class="input_new_kwh_wrapper">
+                    <label class="label_new_kwh">Jaarlijks verbruik <br><span>(in kWh)</span></label>
+                    <input disabled step="0.1" min="0.1" type="number" name="new_use_year" class="new_use_year" />
+                </div>
+            </div>
+
+            <div class="change_end_of_life_group-grid">
+                <input type="checkbox" id="checkbox" class="end_of_life" name="end_of_life">
+                <label class="label_end_of_life" data-labelfor="checkbox" for="end_of_life">Pas na einde levensduur van het toestel
+                    vervangen.</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionThree">
+        <h2 class="periodText">Resultaat na 10 jaar</h2>
+        <div id="result">
+            <label class="replacements">Vervangingen</label>
+            <label class="price">Investering <br><span>(in €)</span></label>
+            <label class="usageOne">Verbruik <br><span>(in €)</span></label>
+            <label class="totalOne">Totaal <br class="break"><span>(in €)</span></label>
+            <label class="material">Materialen <br><span>(in kg CO2 eq.)</span></label>
+            <label class="usageTwo">Energie <br><span>(in kg CO2 eq.)</span></label>
+            <label class="totalTwo">Totaal <br class="break"><span>(in kg CO2 eq.)</span></label>
+
+            <p class="current_object">A / B</p>
+            <p class="current_replacements">2</p>
+            <p class="current_cost_purchase">2</p>
+            <p class="current_cost_consumption_one">2</p>
+            <p class="current_cost_total">2</p>
+            <p class="current_co_material">2</p>
+            <p class="current_cost_consumption">2</p>
+            <p class="current_co_total">2</p>
+
+            <p class="new_object">A / B</p>
+            <p class="new_replacements">2</p>
+            <p class="new_cost_purchase">2</p>
+            <p class="new_cost_consumption_one">2</p>
+            <p class="new_cost_total">2</p>
+            <p class="new_co_material">2</p>
+            <p class="new_cost_consumption">2</p>
+            <p class="new_co_total">2</p>
+
+            <div class="line one">
+                <hr>
+            </div>
+            <div class="line two">
+                <hr>
+            </div>
+            <div class="line three">
+                <hr>
+            </div>
+            <div class="line four">
+                <hr>
+            </div>
+            <div class="line five">
+                <hr>
+            </div>
+            <div class="line six"></div>
+            <div class="line seven">
+                <hr>
+            </div>
+            <div class="line eight">
+                <hr>
+            </div>
+            <div class="line nine">
+                <hr>
+            </div>
+            <div class="line ten"></div>
+
+            <p class="difference_object">Verschil</p>
+
+            <p class="mobile replacements">Vervangingen</p>
+            <p class="difference_replacements">2</p>
+
+            <p class="mobile cost_purchase">Aankoop</p>
+            <p class="difference_cost_purchase">2</p>
+
+            <p class="mobile cost_consumption_one">Verbruik</p>
+            <p class="difference_cost_consumption_one">2</p>
+
+            <p class="mobile cost_total">Totaal</p>
+            <p class="difference_cost_total">2</p>
+
+            <p class="mobile co_material">Materiaal</p>
+            <p class="difference_co_material">2</p>
+
+            <p class="mobile cost_consumption">Verbruik</p>
+            <p class="difference_cost_consumption">2</p>
+
+            <p class="mobile co_total">Totaal</p>
+            <p class="difference_co_total">2</p>
+
+        </div>
+    </div>
+
+    <div id="wrapper--dark">
+        <div id="arrow--div">
+            <p>Bekijk je analyseresultaten</p>
+            <button class="arrow"><img src="img/arrow.svg"></button>
+        </div>
+
+        <div id="#result" class="container">
+            <h2 class="analyseresultaat">Analyseresultaten stofzuiger - A/D naar A++/B</h2>
+            <p class="resultIntro" style="margin-bottom: 50px;"></p>
+            <div class="tree_container" >
+                <div class="treeText">
+                    <h3>Bomen</h3>
+                    <p class="resultTrees" ></p>
+                </div>
+                <img src="img/trees-transparant.png" alt="trees" class="treeImg">
+            </div>
+            <h3>Vervangingen</h3>
+            <p class="resultReplacements" style="margin-bottom: 50px;"></p>
+            <h3>Verbruik versus aankoop</h3>
+            <p class="resultUsageVsBuy" style="margin-bottom: 50px;"></p>
+            <h3>CO₂ Uitstoot - Verbruik versus aankoop</h3>
+            <p class="resultCoUsageVsBuy" style="margin-bottom: 50px;"></p>            
+        </div>
+    </div>
+
+    <a id="professor">
+        <div class="clip"></div>
+        <div class="notification"></div>
+    </a>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><!-- Data from JS --></p>
+            <button class="fix situationOne">Pas automatisch aan</button>
+            <button class="fix situationTwo">Pas automatisch aan</button>
+            <button class="cancel">Negeren</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

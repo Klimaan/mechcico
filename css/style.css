@@ -1,21 +1,12 @@
 /*--------- COLORS ---------*/
-
-$blue: #283991;
-$orange: #DE7D2F;
-$text: #000000; 
-$background: #F5F5F5;
-$shadow: #E3E3E3;
-$background--dark: #eaebed; 
-
 /*--------- MAIN ---------*/
-
-.cancel{
+.cancel {
   background-color: white;
-  color: $blue !important;
-  border: 2px solid $blue;
+  color: #283991 !important;
+  border: 2px solid #283991;
 }
 
-span{
+span {
   font-size: 12px;
 }
 
@@ -23,402 +14,792 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1{
-    margin: 0;
-    padding: 0;
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
-h2{
-    font-size: 18px;
-    font-weight: 600;
+h2 {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-h3{
+h3 {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-p{
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 .label_new_price,
-      .label_new_age,
-      .label_new_lifespan,
-      .label_new_wattage,
-      .label_new_daily_usage,
-      .label_new_kwh {
-        display: none;
-      }
-
+.label_new_age,
+.label_new_lifespan,
+.label_new_wattage,
+.label_new_daily_usage,
+.label_new_kwh {
+  display: none;
+}
 
 /*--------- BUTTONS ---------*/
-
-button{
-    background-color: $blue;
-    color: white;
-    border: none;
-    padding: 15px 50px;
-    border-radius: 10px; 
+button {
+  background-color: #283991;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 10px;
 }
 
-.arrow{
-    background-color: $background--dark;
-    color: $text;
-    font-size: larger;
-    padding: 20px 50px;
-    border: none;
+.arrow {
+  background-color: #eaebed;
+  color: #000000;
+  font-size: larger;
+  padding: 20px 50px;
+  border: none;
 }
-
 
 /*--------- INPUT ---------*/
-
 input,
 select {
-    background-color: white;
-    border: none;
-    height: 30px;
-    // width: 100px;
-    border-radius: 6px;
-    padding: 0 10px;
-    box-sizing: border-box;
+  background-color: white;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 select {
-    padding: 0 1em;
+  padding: 0 1em;
 }
 
-// Style for checkbox
 input[type='checkbox'] {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
-
 
 /*--------- HEADER ---------*/
-
-h1{
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    font-weight: 600;
-    max-width: 1280px;
-    width: 80%;
+h1 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font-weight: 600;
+  max-width: 1280px;
+  width: 80%;
 }
 
-header{
-    padding: 0 20px;
-    box-shadow: 0 4px 15px 0px #ededed;
-
-    img{
-        width: 85px;
-        padding: 8px 0;
-    }
-
-    .content{
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        text-align: center;
-        overflow: hidden;
-        padding: 30px 0;
-
-        h1{
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-        }
-
-        h2{
-            font-weight: 300;
-            margin: 0;
-            font-size: 16px;
-        }
-    }
+header {
+  padding: 0 20px;
+  -webkit-box-shadow: 0 4px 15px 0px #ededed;
+          box-shadow: 0 4px 15px 0px #ededed;
 }
 
+header img {
+  width: 85px;
+  padding: 8px 0;
+}
+
+header .content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+header .content h1 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+header .content h2 {
+  font-weight: 300;
+  margin: 0;
+  font-size: 16px;
+}
 
 /*--------- SECTION ONE ---------*/
+#sectionOne {
+  width: 80%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 75px;
+  overflow: auto;
+  background-color: #283991;
+  margin-bottom: 30px;
+  color: white;
+}
 
-#sectionOne{
-    width: 80%;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    margin-top: 75px;
-    overflow: auto;
-    background-color: $blue;
-    margin-bottom: 30px;
-    color: white;
+#sectionOne .info {
+  width: 60%;
+  padding: 30px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
 
-    .info{
-        width: 60%;
-        padding: 30px 50px;
-        box-sizing: border-box;
-        float: left;
-    }
+#sectionOne .settings {
+  width: 40%;
+  padding: 30px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  border-left: 30px solid white;
+}
 
-    .settings{
-        width: 40%;
-        padding: 30px 50px; 
-        box-sizing: border-box;
-        float: left;
-        border-left: 30px solid white;
+#sectionOne .settings .option {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
-        .option{
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            justify-content: space-between;
-            
-            input{
-                width: 120px;
-                margin-left: 20px;
-            }
-        }
-    }
+#sectionOne .settings .option input {
+  width: 120px;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 900px) {
-    #sectionOne{
-      margin-bottom: 0;
-
-        .info{
-            width: 100%;
-            padding-bottom: 50px;
-        }
-
-        .settings{
-            width: 100%;
-            border-left: none;
-            background-color: $blue;
-            color: white;
-        }
-    }
+  #sectionOne {
+    margin-bottom: 0;
+  }
+  #sectionOne .info {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  #sectionOne .settings {
+    width: 100%;
+    border-left: none;
+    background-color: #283991;
+    color: white;
+  }
 }
 
-
 /*------ SECTION 2 ------*/
-
 #wrapper_grid {
-    background-color: $background;
+  background-color: #F5F5F5;
+  width: 80%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+  -ms-grid-rows: 3em 2em 3em 4em 2em 1em 4em 3em;
+      grid-template-rows: 3em 2em 3em 4em 2em 1em 4em 3em;
+  /*------ GENERAL LABELS ------*/
+}
+
+#wrapper_grid .comparison_select-group-grid {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-color: #F5F5F5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 10% 45%;
+      grid-template-columns: 45% 10% 45%;
+}
+
+#wrapper_grid .comparison_select-group-grid .comparison_select_machine {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+#wrapper_grid .comparison_select-group-grid .comparison_select_machine label {
+  margin-right: 10px;
+}
+
+#wrapper_grid .comparison_select-group-grid .comparison_amount_machines {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+#wrapper_grid .comparison_select-group-grid .comparison_amount_machines input {
+  text-align: center;
+}
+
+#wrapper_grid .label_price_wrapper,
+#wrapper_grid .label_age_wrapper,
+#wrapper_grid .label_lifespan_wrapper,
+#wrapper_grid .label_wattage_wrapper,
+#wrapper_grid .label_daily_usage_wrapper,
+#wrapper_grid .label_kwh_wrapper {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  text-align: center;
+  opacity: .5;
+}
+
+#wrapper_grid .label_price_wrapper span,
+#wrapper_grid .label_age_wrapper span,
+#wrapper_grid .label_lifespan_wrapper span,
+#wrapper_grid .label_wattage_wrapper span,
+#wrapper_grid .label_daily_usage_wrapper span,
+#wrapper_grid .label_kwh_wrapper span {
+  font-size: 12px;
+}
+
+#wrapper_grid .label_price_wrapper {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+#wrapper_grid .label_age_wrapper {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+#wrapper_grid .label_lifespan_wrapper {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+}
+
+#wrapper_grid .label_wattage_wrapper {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7 / 8;
+}
+
+#wrapper_grid .label_daily_usage_wrapper {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+}
+
+#wrapper_grid .label_kwh_wrapper {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 /10;
+}
+
+#wrapper_grid .seporator {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#wrapper_grid .upper_seporator {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+#wrapper_grid .lower_seporator {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+#wrapper_grid .select_current {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  display: -ms-grid;
+  display: grid;
+  opacity: .5;
+  -ms-grid-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+}
+
+#wrapper_grid .select_current .select_current_situation {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#wrapper_grid .select_current .select_current_situation .label_current_situation {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+#wrapper_grid .select_current .select_current_situation .current_situation {
+  width: 100%;
+}
+
+#wrapper_grid .select_current .input_current_price_wrapper {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+#wrapper_grid .select_current .input_current_age_wrapper {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+#wrapper_grid .select_current .input_current_lifespan_wrapper {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+}
+
+#wrapper_grid .select_current .input_current_wattage_wrapper {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7 / 8;
+}
+
+#wrapper_grid .select_current .input_current_usage_wrapper {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+}
+
+#wrapper_grid .select_current .input_current_kwh_wrapper {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+}
+
+#wrapper_grid .select_current .label_current_price,
+#wrapper_grid .select_current .label_current_age,
+#wrapper_grid .select_current .label_current_lifespan,
+#wrapper_grid .select_current .label_current_wattage,
+#wrapper_grid .select_current .label_current_daily_usage,
+#wrapper_grid .select_current .label_current_kwh {
+  display: none;
+}
+
+#wrapper_grid .select_new {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7 / 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+  opacity: .5;
+}
+
+#wrapper_grid .select_new .select_new_situation {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#wrapper_grid .select_new .select_new_situation .label_new_situation {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+#wrapper_grid .select_new .select_new_situation .new_situation {
+  width: 100%;
+}
+
+#wrapper_grid .select_new .input_new_price_wrapper {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+#wrapper_grid .select_new .input_new_age_wrapper {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+#wrapper_grid .select_new .input_new_lifespan_wrapper {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+}
+
+#wrapper_grid .select_new .input_new_wattage_wrapper {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7 / 8;
+}
+
+#wrapper_grid .select_new .input_new_usage_wrapper {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+}
+
+#wrapper_grid .select_new .input_new_kwh_wrapper {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+}
+
+#wrapper_grid .input_current_price_wrapper input,
+#wrapper_grid .input_current_age_wrapper input,
+#wrapper_grid .input_current_lifespan_wrapper input,
+#wrapper_grid .input_current_wattage_wrapper input,
+#wrapper_grid .input_current_usage_wrapper input,
+#wrapper_grid .input_current_kwh_wrapper input,
+#wrapper_grid .input_new_price_wrapper input,
+#wrapper_grid .input_new_age_wrapper input,
+#wrapper_grid .input_new_lifespan_wrapper input,
+#wrapper_grid .input_new_wattage_wrapper input,
+#wrapper_grid .input_new_usage_wrapper input,
+#wrapper_grid .input_new_kwh_wrapper input {
+  display: block;
+  margin: 2em auto 0 auto;
+  width: 85%;
+  text-align: center;
+}
+
+#wrapper_grid .change_end_of_life_group-grid {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 5;
+  grid-column: 5 / 10;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8 / 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#wrapper_grid .change_end_of_life_group-grid .end_of_life,
+#wrapper_grid .change_end_of_life_group-grid .label_end_of_life {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.select_new_situation,
+.input_new_price_wrapper,
+.input_new_age_wrapper,
+.input_new_lifespan_wrapper,
+.input_new_wattage_wrapper,
+.input_new_usage_wrapper,
+.input_new_kwh_wrapper {
+  text-align: center;
+}
+
+/*------ SECTION 2 - MEDIAQUERY ------*/
+@media only screen and (max-width: 1334px) {
+  .break {
+    display: none;
+  }
+  #wrapper_grid {
     width: 80%;
-    max-width: 1280px;
+    display: block;
+    background-color: white;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px 50px;
-    box-sizing: border-box;
-  
-    display: grid;
-    grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
-    grid-template-rows: 3em 2em 3em 4em 2em 1em 4em 3em;
-  
-    .comparison_select-group-grid {
-      grid-column: 1 / 10;
-      grid-row: 1 / 2;
-      background-color: #F5F5F5;
-  
-      display: grid;
-      grid-template-columns: 45% 10% 45%;
-  
-      .comparison_select_machine {
-        grid-column: 1 / 3;
-  
-        label {
-          margin-right: 10px;
-        }
-      }
-      .comparison_amount_machines {
-        grid-column: 3 / 4;
-        input {
-          text-align: center;
-        }
-      }
-    }
-  
-    /*------ GENERAL LABELS ------*/
-  
-    .label_price_wrapper,
-    .label_age_wrapper,
-    .label_lifespan_wrapper,
-    .label_wattage_wrapper,
-    .label_daily_usage_wrapper,
-    .label_kwh_wrapper {
-      grid-row: 3 / 4;
-      text-align: center;
-      opacity: .5;
-      
-      span{
-        font-size: 12px;
-      }
-    }
-    .label_price_wrapper {
-      grid-column: 3 / 4;
-    }
-    .label_age_wrapper {
-      grid-column: 4 / 5;
-    }
-    .label_lifespan_wrapper {
-      grid-column: 5 / 6;
-    }
-    .label_wattage_wrapper {
-      grid-column: 7 / 8;
-    }
-    .label_daily_usage_wrapper {
-      grid-column: 8 / 9;
-    }
-    .label_kwh_wrapper {
-      grid-column: 9 /10;
-    }
-  
-    .seporator {
-      grid-column: 1 / 10;
-      align-self: center;
-    }
-    .upper_seporator {
-      grid-row: 2 / 3;
-    }
-    .lower_seporator {
-      // Leave comment below for later styleing
-      // grid-column-start: 2;
-      grid-row: 5 / 6;
-    }
-  
-    // old current situation group
-    .select_current {
-      grid-row: 4 / 5;
-      grid-column: 1 / 10;
-      display: grid;
-      opacity: .5;
-      // border: 1px solid black;
-      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
-      .select_current_situation {
-        grid-column: 1 / 2;
-        .label_current_situation {
-          display: inline-block;
-          width: 100%;
-          margin-bottom: 0.5em;
-        }
-        .current_situation {
-          width: 100%;
-        }
-      }
-      .input_current_price_wrapper {
-        grid-column: 3 / 4;
-      }
-      .input_current_age_wrapper {
-        grid-column: 4 / 5;
-      }
-      .input_current_lifespan_wrapper {
-        grid-column: 5 / 6;
-      }
-      .input_current_wattage_wrapper {
-        grid-column: 7 / 8;
-      }
-      .input_current_usage_wrapper {
-        grid-column: 8 / 9;
-      }
-      .input_current_kwh_wrapper {
-        grid-column: 9 / 10;
-      }
-  
-      .label_current_price,
-      .label_current_age,
-      .label_current_lifespan,
-      .label_current_wattage,
-      .label_current_daily_usage,
-      .label_current_kwh {
-        display: none;
-      }
-    }
-  
-    // old new situation group
-    .select_new {
-      grid-row: 7 / 8;
-      grid-column: 1 / 10;
-      display: grid;
-      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
-      opacity: .5;
-  
-      .select_new_situation {
-        grid-column: 1 / 2;
-        .label_new_situation {
-          display: inline-block;
-          width: 100%;
-          margin-bottom: 0.5em;
-        }
-        .new_situation {
-          width: 100%;
-        }
-      }
-      .input_new_price_wrapper {
-        grid-column: 3 / 4;
-      }
-      .input_new_age_wrapper {
-        grid-column: 4 / 5;
-      }
-      .input_new_lifespan_wrapper {
-        grid-column: 5 / 6;
-      }
-      .input_new_wattage_wrapper {
-        grid-column: 7 / 8;
-      }
-      .input_new_usage_wrapper {
-        grid-column: 8 / 9;
-      }
-      .input_new_kwh_wrapper {
-        grid-column: 9 / 10;
-      }
-    }
-  
-    .input_current_price_wrapper,
-    .input_current_age_wrapper,
-    .input_current_lifespan_wrapper,
-    .input_current_wattage_wrapper,
-    .input_current_usage_wrapper,
-    .input_current_kwh_wrapper,
-    .input_new_price_wrapper,
-    .input_new_age_wrapper,
-    .input_new_lifespan_wrapper,
-    .input_new_wattage_wrapper,
-    .input_new_usage_wrapper,
-    .input_new_kwh_wrapper {
-      input {
-        display: block;
-        margin: 2em auto 0 auto;
-        width: 85%;
-        text-align: center;
-      }
-    }
-  
-    .change_end_of_life_group-grid {
-      grid-column: 5 / 10;
-      grid-row: 8 / 9;
-      display: flex;
-      justify-content: flex-end;
-      .end_of_life,
-      .label_end_of_life {
-        align-self: flex-end;
-      }
-    }
   }
-
+  #wrapper_grid input,
+  #wrapper_grid select {
+    border: 1px solid black;
+  }
+  #wrapper_grid .comparison_select-group-grid {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  #wrapper_grid .comparison_select-group-grid .comparison_select_machine label {
+    font-size: 0.8em;
+    margin-left: 1em;
+  }
+  #wrapper_grid .comparison_select-group-grid .comparison_select_machine select {
+    width: 80%;
+    margin-top: 0.8em;
+    margin-left: 1em;
+  }
+  #wrapper_grid .comparison_select-group-grid .comparison_amount_machines {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    margin-top: 30px;
+  }
+  #wrapper_grid .comparison_select-group-grid .comparison_amount_machines label {
+    font-size: 0.8em;
+    margin-left: 1em;
+  }
+  #wrapper_grid .comparison_select-group-grid .comparison_amount_machines input {
+    width: 80%;
+    border: 1px solid #000000;
+    margin-top: 0.8em;
+    margin-left: 1em;
+  }
+  #wrapper_grid .seporator,
+  #wrapper_grid .label_price_wrapper,
+  #wrapper_grid .label_age_wrapper,
+  #wrapper_grid .label_lifespan_wrapper,
+  #wrapper_grid .label_wattage_wrapper,
+  #wrapper_grid .label_daily_usage_wrapper,
+  #wrapper_grid .label_kwh_wrapper {
+    display: none;
+  }
+  #wrapper_grid .select_current {
+    background-color: #283991;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 2em 6em 7em 7em 7em 5em 2em;
+        grid-template-rows: 2em 6em 7em 7em 7em 5em 2em;
+    padding-left: 20px;
+  }
+  #wrapper_grid .select_current .select_current_situation {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 /3;
+    color: #fff;
+  }
+  #wrapper_grid .select_current .select_current_situation .current_situation {
+    width: 10em;
+  }
+  #wrapper_grid .select_current .input_current_price_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #wrapper_grid .select_current .input_current_age_wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #wrapper_grid .select_current .input_current_lifespan_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #wrapper_grid .select_current .input_current_wattage_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #wrapper_grid .select_current .input_current_usage_wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ 3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #wrapper_grid .select_current .input_current_kwh_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  #wrapper_grid .select_current .select_current_situation label,
+  #wrapper_grid .select_current .input_current_price_wrapper label,
+  #wrapper_grid .select_current .input_current_age_wrapper label,
+  #wrapper_grid .select_current .input_current_lifespan_wrapper label,
+  #wrapper_grid .select_current .input_current_wattage_wrapper label,
+  #wrapper_grid .select_current .input_current_usage_wrapper label,
+  #wrapper_grid .select_current .input_current_kwh_wrapper label {
+    font-weight: 500;
+    color: #fff;
+  }
+  #wrapper_grid .select_current .select_current_situation input,
+  #wrapper_grid .select_current .input_current_price_wrapper input,
+  #wrapper_grid .select_current .input_current_age_wrapper input,
+  #wrapper_grid .select_current .input_current_lifespan_wrapper input,
+  #wrapper_grid .select_current .input_current_wattage_wrapper input,
+  #wrapper_grid .select_current .input_current_usage_wrapper input,
+  #wrapper_grid .select_current .input_current_kwh_wrapper input {
+    margin: 0;
+    margin-top: 0.7em;
+    width: 10em;
+  }
+  #wrapper_grid .select_current .label_current_price,
+  #wrapper_grid .select_current .label_current_age,
+  #wrapper_grid .select_current .label_current_lifespan,
+  #wrapper_grid .select_current .label_current_wattage,
+  #wrapper_grid .select_current .label_current_daily_usage,
+  #wrapper_grid .select_current .label_current_kwh {
+    display: block;
+  }
+  #wrapper_grid .select_new {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 2em 6em 7em 7em 7em 5em 0.5em;
+        grid-template-rows: 2em 6em 7em 7em 7em 5em 0.5em;
+    padding-left: 20px;
+    background-color: #F5F5F5;
+  }
+  #wrapper_grid .select_new .select_new_situation {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 /3;
+    color: #000;
+  }
+  #wrapper_grid .select_new .select_new_situation .new_situation {
+    width: 10em;
+  }
+  #wrapper_grid .select_new .input_new_price_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #wrapper_grid .select_new .input_new_age_wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #wrapper_grid .select_new .input_new_lifespan_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #wrapper_grid .select_new .input_new_wattage_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #wrapper_grid .select_new .input_new_usage_wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ 3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #wrapper_grid .select_new .input_new_kwh_wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/ 2;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  #wrapper_grid .select_new .select_new_situation label,
+  #wrapper_grid .select_new .input_new_price_wrapper label,
+  #wrapper_grid .select_new .input_new_age_wrapper label,
+  #wrapper_grid .select_new .input_new_lifespan_wrapper label,
+  #wrapper_grid .select_new .input_new_wattage_wrapper label,
+  #wrapper_grid .select_new .input_new_usage_wrapper label,
+  #wrapper_grid .select_new .input_new_kwh_wrapper label {
+    font-weight: 500;
+    color: #000;
+  }
+  #wrapper_grid .select_new .select_new_situation input,
+  #wrapper_grid .select_new .input_new_price_wrapper input,
+  #wrapper_grid .select_new .input_new_age_wrapper input,
+  #wrapper_grid .select_new .input_new_lifespan_wrapper input,
+  #wrapper_grid .select_new .input_new_wattage_wrapper input,
+  #wrapper_grid .select_new .input_new_usage_wrapper input,
+  #wrapper_grid .select_new .input_new_kwh_wrapper input {
+    margin: 0;
+    margin-top: 0.7em;
+    width: 10em;
+  }
+  #wrapper_grid .select_new .label_new_price,
+  #wrapper_grid .select_new .label_new_age,
+  #wrapper_grid .select_new .label_new_lifespan,
+  #wrapper_grid .select_new .label_new_wattage,
+  #wrapper_grid .select_new .label_new_daily_usage,
+  #wrapper_grid .select_new .label_new_kwh {
+    display: block;
+  }
+  #wrapper_grid .change_end_of_life_group-grid {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 30px;
+  }
+  #wrapper_grid .change_end_of_life_group-grid .label_end_of_life {
+    font-size: 0.8em;
+    vertical-align: 0.15em;
+  }
   .select_new_situation,
   .input_new_price_wrapper,
   .input_new_age_wrapper,
@@ -426,1057 +807,1086 @@ header{
   .input_new_wattage_wrapper,
   .input_new_usage_wrapper,
   .input_new_kwh_wrapper {
-      text-align: center;
-    }
-  
-
-
-  /*------ SECTION 2 - MEDIAQUERY ------*/
-@media only screen and (max-width: 1334px) {
-
-  .break{
-    display: none;
+    text-align: left;
   }
-
-    #wrapper_grid {
-      width: 80%;
-      display: block;
-      background-color: white;
-      padding: 0;
-      margin-left: auto;
-      margin-right: auto;
-      input,
-      select {
-        border: 1px solid black;
-      }
-      .comparison_select-group-grid {
-        grid-template-columns: 50% 50%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 50px;
-        padding-top: 50px;
-        
-
-        .comparison_select_machine {
-
-          label {
-            font-size: 0.8em;
-            margin-left: 1em;
-          }
-          select {
-            width: 80%;
-            margin-top: 0.8em;
-            margin-left: 1em;
-          }
-        }
-        .comparison_amount_machines {
-          grid-column: 1 / 3;
-          margin-top: 30px;
-
-          label {
-            font-size: 0.8em;
-            margin-left: 1em;
-          }
-          input {
-            width: 80%;
-            border: 1px solid #000000;
-            margin-top: 0.8em;
-            margin-left: 1em;
-          }
-        }
-      }
-      .seporator,
-      .label_price_wrapper,
-      .label_age_wrapper,
-      .label_lifespan_wrapper,
-      .label_wattage_wrapper,
-      .label_daily_usage_wrapper,
-      .label_kwh_wrapper {
-        display: none;
-      }
-      .select_current {
-        background-color: $blue;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 2em 6em 7em 7em 7em 5em 2em;
-        padding-left: 20px;
-        .select_current_situation {
-          grid-column: 1/ 2;
-          grid-row: 2 /3;
-          color: #fff;
-          .current_situation {
-            width: 10em;
-          }
-        }
-        .input_current_price_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 3 / 4;
-        }
-        .input_current_age_wrapper {
-          grid-column: 2/ 3;
-          grid-row: 3 / 4;
-        }
-        .input_current_lifespan_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 4 / 5;
-        }
-  
-        .input_current_wattage_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 5 / 6;
-        }
-        .input_current_usage_wrapper {
-          grid-column: 2/ 3;
-          grid-row: 5 / 6;
-        }
-        .input_current_kwh_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 6 / 7;
-        }
-  
-        .select_current_situation,
-        .input_current_price_wrapper,
-        .input_current_age_wrapper,
-        .input_current_lifespan_wrapper,
-        .input_current_wattage_wrapper,
-        .input_current_usage_wrapper,
-        .input_current_kwh_wrapper {
-          label {
-            font-weight: 500;
-            color: #fff;
-          }
-          input {
-            margin: 0;
-            margin-top: 0.7em;
-            width: 10em;
-          }
-        }
-        .label_current_price,
-        .label_current_age,
-        .label_current_lifespan,
-        .label_current_wattage,
-        .label_current_daily_usage,
-        .label_current_kwh {
-          display: block;
-        }
-      }
-      .select_new {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 2em 6em 7em 7em 7em 5em 0.5em;
-        padding-left: 20px;
-        background-color: #F5F5F5;
-        .select_new_situation {
-          grid-column: 1/ 2;
-          grid-row: 2 /3;
-          color: #000;
-          .new_situation {
-            width: 10em;
-          }
-        }
-        .input_new_price_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 3 / 4;
-        }
-        .input_new_age_wrapper {
-          grid-column: 2/ 3;
-          grid-row: 3 / 4;
-        }
-        .input_new_lifespan_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 4 / 5;
-        }
-  
-        .input_new_wattage_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 5 / 6;
-        }
-        .input_new_usage_wrapper {
-          grid-column: 2/ 3;
-          grid-row: 5 / 6;
-        }
-        .input_new_kwh_wrapper {
-          grid-column: 1/ 2;
-          grid-row: 6 / 7;
-        }
-
-
-        .select_new_situation,
-        .input_new_price_wrapper,
-        .input_new_age_wrapper,
-        .input_new_lifespan_wrapper,
-        .input_new_wattage_wrapper,
-        .input_new_usage_wrapper,
-        .input_new_kwh_wrapper {
-          label {
-            font-weight: 500;
-            color: #000;
-          }
-          input {
-            margin: 0;
-            margin-top: 0.7em;
-            width: 10em;
-          }
-        }
-        .label_new_price,
-        .label_new_age,
-        .label_new_lifespan,
-        .label_new_wattage,
-        .label_new_daily_usage,
-        .label_new_kwh {
-          display: block;
-        }
-      }
-      .change_end_of_life_group-grid {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        background-color: #F5F5F5;
-        padding-bottom: 50px;
-        padding-left: 20px;
-        box-sizing: border-box;
-        padding-top: 30px;
-  
-        .label_end_of_life {
-          font-size: 0.8em;
-          vertical-align: 0.15em;
-        }
-      }
-    }
-
-    .select_new_situation,
-  .input_new_price_wrapper,
-  .input_new_age_wrapper,
-  .input_new_lifespan_wrapper,
-  .input_new_wattage_wrapper,
-  .input_new_usage_wrapper,
-  .input_new_kwh_wrapper {
-      text-align: left;
-    }
-  
-  }
+}
 
 /*------ SECTION 3 - RESULTAAT ------*/
-
-#sectionThree{
-    background-color: $blue;
-    width: 80%;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 50px;
-    box-sizing: border-box;
-    margin-top: 30px;
-    color: white;
-    display: none;
+#sectionThree {
+  background-color: #283991;
+  width: 80%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 30px;
+  color: white;
+  display: none;
 }
 
-#result{
-    display: grid;
-    grid-template-columns: 10% 20% 5% 10% 10% 10% 5% 10% 10% 10%;
-    grid-template-rows: 80px 50px 50px 30px 50px;
-    gap: 0px 0px;
-    text-align: center;
-    padding-bottom: 30px;
+#result {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 20% 5% 10% 10% 10% 5% 10% 10% 10%;
+      grid-template-columns: 10% 20% 5% 10% 10% 10% 5% 10% 10% 10%;
+  -ms-grid-rows: 80px 50px 50px 30px 50px;
+      grid-template-rows: 80px 50px 50px 30px 50px;
+  gap: 0px 0px;
+  text-align: center;
+  padding-bottom: 30px;
+}
 
-    .mobile{
-      display: none;
-    }
+#result .mobile {
+  display: none;
+}
 
-    hr{
-        border-top: 1px solid white;
-    }
+#result hr {
+  border-top: 1px solid white;
+}
 
-    // LINES
-    .line.one{
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-        padding-top: 8px;
-    }
+#result .line.one {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding-top: 8px;
+}
 
-    .line.two{
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-        padding-top: 8px;
-    }
-    
-    .line.three{
-        grid-row: 4 / 5;
-        grid-column: 3 / 4;
-        padding-top: 8px;
-    }
+#result .line.two {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding-top: 8px;
+}
 
-    .line.four{
-        grid-row: 4 / 5;
-        grid-column: 4 / 5;
-        padding-top: 8px;
-    }
+#result .line.three {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  padding-top: 8px;
+}
 
-    .line.five{
-        grid-row: 4 / 5;
-        grid-column: 5 / 6;
-        padding-top: 8px;
-    }
+#result .line.four {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 8px;
+}
 
-    .line.six{
-        grid-row: 4 / 5;
-        grid-column: 6 / 7;
-        padding-top: 8px;
-        background-color: white;
-    }
+#result .line.five {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  padding-top: 8px;
+}
 
-    .line.seven{
-        grid-row: 4 / 5;
-        grid-column: 7 / 8;
-        padding-top: 8px;
-    }
+#result .line.six {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  padding-top: 8px;
+  background-color: white;
+}
 
-    .line.eight{
-        grid-row: 4 / 5;
-        grid-column: 8 / 9;
-        padding-top: 8px;
-    }
+#result .line.seven {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7 / 8;
+  padding-top: 8px;
+}
 
-    .line.nine{
-        grid-row: 4 / 5;
-        grid-column: 9 / 10;
-        padding-top: 8px;
-    }
+#result .line.eight {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+  padding-top: 8px;
+}
 
-    .line.ten{
-        grid-row: 4 / 5;
-        grid-column: 10 / 11;
-        padding-top: 8px;
-        background-color: white;
-    }
+#result .line.nine {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+  padding-top: 8px;
+}
 
-    //ROW ONE
+#result .line.ten {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-column: 10 / 11;
+  padding-top: 8px;
+  background-color: white;
+}
 
-    label.replacements{
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-        padding-top: 15px;
-        background-color: $blue;
-        color: white;
-    }
+#result label.replacements {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding-top: 15px;
+  background-color: #283991;
+  color: white;
+}
 
-    label.price{
-        grid-row: 1 / 2;
-        grid-column: 4 / 5;
-        padding-top: 15px;
-    }
+#result label.price {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 15px;
+}
 
-    label.usageOne{
-        grid-row: 1 / 2;
-        grid-column: 5 / 6;
-        padding-top: 15px;
-    }
+#result label.usageOne {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  padding-top: 15px;
+}
 
-    label.totalOne{
-        grid-row: 1 / 2;
-        grid-column: 6 / 7;
-        background-color: white;
-        padding-top: 15px;
-        color: $text;
-    }
+#result label.totalOne {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  background-color: white;
+  padding-top: 15px;
+  color: #000000;
+}
 
-    label.material{
-        grid-row: 1 / 2;
-        grid-column: 8 / 9;
-        padding-top: 15px;
-    }
+#result label.material {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+  padding-top: 15px;
+}
 
-    label.usageTwo{
-        grid-row: 1 / 2;
-        grid-column: 9 / 10;
-        padding-top: 15px;
-    }
+#result label.usageTwo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+  padding-top: 15px;
+}
 
-    label.totalTwo{
-        grid-row: 1 / 2;
-        grid-column: 10 / 11;
-        padding-top: 15px;
-        background-color: white;
-        color: $text;
-    }
+#result label.totalTwo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-column: 10 / 11;
+  padding-top: 15px;
+  background-color: white;
+  color: #000000;
+}
 
-    //ROW TWO
+#result .current_object {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  padding-top: 15px;
+}
 
-    .current_object{
-        grid-row: 2 / 3;
-        padding-top: 15px;
-    }
+#result .current_replacements {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding-top: 15px;
+}
 
-    .current_replacements{
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
-        padding-top: 15px;
-    }
+#result .current_cost_purchase {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 15px;
+}
 
-    .current_cost_purchase{
-        grid-row: 2 / 3;
-        grid-column: 4 / 5;
-        padding-top: 15px;
-    }
+#result .current_cost_consumption_one {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  padding-top: 15px;
+}
 
-    .current_cost_consumption_one{
-        grid-row: 2 / 3;
-        grid-column: 5 / 6;
-        padding-top: 15px;
-    }
+#result .current_cost_total {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  background-color: white;
+  padding-top: 15px;
+  color: #000000;
+}
 
-    .current_cost_total{
-        grid-row: 2 / 3;
-        grid-column: 6 / 7;
-        background-color: white;
-        padding-top: 15px;
-        color: $text;
-    }
+#result .current_co_material {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+  padding-top: 15px;
+}
 
-    .current_co_material{
-        grid-row: 2 / 3;
-        grid-column: 8 / 9;
-        padding-top: 15px;
-    }
+#result .current_cost_consumption {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+  padding-top: 15px;
+}
 
-    .current_cost_consumption{
-        grid-row: 2 / 3;
-        grid-column: 9 / 10;
-        padding-top: 15px;
-    }
+#result .current_co_total {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-column: 10 / 11;
+  padding-top: 15px;
+  background-color: white;
+  color: #000000;
+}
 
-    .current_co_total{
-        grid-row: 2 / 3;
-        grid-column: 10 / 11;
-        padding-top: 15px;
-        background-color: white;
-        color: $text;
-    }
+#result .new_object {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  padding-top: 15px;
+}
 
-    //ROW THREE
+#result .new_replacements {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding-top: 15px;
+}
 
-    .new_object{
-        grid-row: 3 / 4;
-        padding-top: 15px;
-    }
+#result .new_cost_purchase {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 15px;
+}
 
-    .new_replacements{
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-        padding-top: 15px;
-    }
+#result .new_cost_consumption_one {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  padding-top: 15px;
+}
 
-    .new_cost_purchase{
-        grid-row: 3 / 4;
-        grid-column: 4 / 5;
-        padding-top: 15px;
-    }
+#result .new_cost_total {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  background-color: white;
+  padding-top: 15px;
+  color: #000000;
+}
 
-    .new_cost_consumption_one{
-        grid-row: 3 / 4;
-        grid-column: 5 / 6;
-        padding-top: 15px;
-    }
+#result .new_co_material {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+  padding-top: 15px;
+}
 
-    .new_cost_total{
-        grid-row: 3 / 4;
-        grid-column: 6 / 7;
-        background-color: white;
-        padding-top: 15px;
-        color: $text;
-    }
+#result .new_cost_consumption {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+  padding-top: 15px;
+}
 
-    .new_co_material{
-        grid-row: 3 / 4;
-        grid-column: 8 / 9;
-        padding-top: 15px;
-    }
+#result .new_co_total {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-column: 10 / 11;
+  padding-top: 15px;
+  background-color: white;
+  color: #000000;
+}
 
-    .new_cost_consumption{
-        grid-row: 3 / 4;
-        grid-column: 9 / 10;
-        padding-top: 15px;
-    }
+#result .difference_object {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  padding-top: 15px;
+}
 
-    .new_co_total{
-        grid-row: 3 / 4;
-        grid-column: 10 / 11;
-        padding-top: 15px;
-        background-color: white;
-        color: $text;
-    }
+#result .difference_replacements {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding-top: 15px;
+}
 
-    //ROW FOUR
+#result .difference_cost_purchase {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 15px;
+}
 
-    .difference_object{
-        grid-row: 5 / 6;
-        padding-top: 15px;
-    }
+#result .difference_cost_consumption_one {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+  padding-top: 15px;
+}
 
-    .difference_replacements{
-        grid-row: 5 / 6;
-        grid-column: 2 / 3;
-        padding-top: 15px;
-    }
+#result .difference_cost_total {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+  background-color: white;
+  padding-top: 15px;
+  color: #000000;
+  color: #000000;
+}
 
-    .difference_cost_purchase{
-        grid-row: 5 / 6;
-        grid-column: 4 / 5;
-        padding-top: 15px;
-    }
+#result .difference_co_material {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 1;
+  grid-column: 8 / 9;
+  padding-top: 15px;
+}
 
-    .difference_cost_consumption_one{
-        grid-row: 5 / 6;
-        grid-column: 5 / 6;
-        padding-top: 15px;
-    }
+#result .difference_cost_consumption {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 1;
+  grid-column: 9 / 10;
+  padding-top: 15px;
+}
 
-    .difference_cost_total{
-        grid-row: 5 / 6;
-        grid-column: 6 / 7;
-        background-color: white;
-        padding-top: 15px;
-        color: $text;
-        color: $text;
-    }
-
-    .difference_co_material{
-        grid-row: 5 / 6;
-        grid-column: 8 / 9;
-        padding-top: 15px;
-    }
-
-    .difference_cost_consumption{
-        grid-row: 5 / 6;
-        grid-column: 9 / 10;
-        padding-top: 15px;
-    }
-
-    .difference_co_total{
-        grid-row: 5 / 6;
-        grid-column: 10 / 11;
-        padding-top: 15px;
-        background-color: white;
-        color: $text;
-    }
+#result .difference_co_total {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 1;
+  grid-column: 10 / 11;
+  padding-top: 15px;
+  background-color: white;
+  color: #000000;
 }
 
 @media only screen and (max-width: 1334px) {
-
-  span{
+  span {
     font-weight: 500;
   }
-
-  #sectionThree{
+  #sectionThree {
     padding: 30px 20px;
-
-    hr{
-      display: none;
-    }
   }
-
-  #result{
-    grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 50px 70px 70px 50px 90px 120px 70px 70px 100px 70px 50px 50px 100px 70px 50px 90px;
-
-    .mobile{
-      display: block;
-      text-align: left;
-    }
-
-    label{
-      text-align: left;
-      padding-left: 20px;
-    }
-
-    label.replacements{
-      grid-row: 2/3;
-      grid-column: 1/2;
-    }
-
-    .current_object{
-      grid-row: 1/2;
-      grid-column: 2/3;
-    }
-
-    .new_object{
-      grid-row: 1/2;
-      grid-column: 3;
-    }
-
-    .current_replacements{
-      grid-row: 2/3;
-      grid-column: 2/3;
-    }
-
-    .new_replacements{
-      grid-row: 2/3;
-      grid-column: 3;
-    }
-
-    label.price{
-      grid-row: 3/4;
-      grid-column: 1/2;
-    }
-
-    .current_cost_purchase{
-      grid-row: 3/4;
-      grid-column: 2/3;
-    }
-
-    .new_cost_purchase{
-      grid-row: 3/4;
-      grid-column: 3;
-    }
-
-    label.usageOne{
-      grid-row: 4/5;
-      grid-column: 1/2;
-    }
-
-    .current_cost_consumption_one{
-      grid-row: 4/5;
-      grid-column: 2/3;
-    }
-
-    .new_cost_consumption_one{
-      grid-row: 4/5;
-      grid-column: 3;
-    }
-
-    label.totalOne{
-      grid-row: 5/6;
-      grid-column: 1/2;
-      margin-top: 40px;
-    }
-
-    .current_cost_total{
-      grid-row: 5/6;
-      grid-column: 2/3;
-      margin-top: 40px;
-    }
-
-    .new_cost_total{
-      grid-row: 5/6;
-      grid-column: 3;
-      margin-top: 40px;
-    }
-
-    // SECTION 2
-
-    label.material{
-      grid-row: 6/7;
-      grid-column: 1/2;
-      margin-top: 50px;
-    }
-
-    .current_co_material{
-      grid-row: 6/7;
-      grid-column: 2/3;
-      margin-top: 50px;
-    }
-
-    .new_co_material{
-      grid-row: 6/7;
-      grid-column: 3;
-      margin-top: 50px;
-    }
-
-    label.usageTwo{
-      grid-row: 7/8;
-      grid-column: 1/2;
-    }
-
-    .current_cost_consumption{
-      grid-row: 7/8;
-      grid-column: 2/3;
-    }
-
-    .new_cost_consumption{
-      grid-row: 7/8;
-      grid-column: 3;
-    }
-
-    label.totalTwo{
-      grid-row: 8/9;
-      grid-column: 1/2;
-      margin-top: 20px;
-    }
-
-    .current_co_total{
-      grid-row: 8/9;
-      grid-column: 2/3;
-      margin-top: 20px;
-    }
-
-    .new_co_total{
-      grid-row: 8/9;
-      grid-column: 3;
-      margin-top: 20px;
-    }
-
-    // DIFFERENCE
-
-    .difference_object{
-      grid-row: 9/10;
-      grid-column: 1/4;
-      text-align: left;
-      font-size: 18px;
-      font-weight: 800;
-      margin-top: 50px;
-      background-color: white;
-      color: $text;
-      padding-left: 20px;
-      padding-top: 30px;
-    }
-
-    .replacements{
-      grid-row: 10/11;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 30px;
-      padding-left: 20px;
-    }
-
-    .cost_purchase{
-      grid-row: 11/12;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 10px;
-      padding-left: 20px;
-    }
-
-    .cost_consumption_one{
-      grid-row: 12/13;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 10px;
-      padding-left: 20px;
-    }
-
-    .cost_total{
-      grid-row: 13/14;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 10px;
-      padding-top: 40px;
-      font-weight: 800;
-      border-bottom: 20px solid $blue;
-      padding-left: 20px;
-    }
-
-    .co_material{
-      grid-row: 14/15;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 30px;
-      padding-left: 20px;
-    }
-
-    .cost_consumption{
-      grid-row: 15/16;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 10px;
-      padding-left: 20px;
-    }
-
-    .co_total{
-      grid-row: 16/17;
-      grid-column: 1/4;
-      background-color: white;
-      color: $text;
-      padding-top: 40px;
-      font-weight: 800;
-      padding-left: 20px;
-    }
-
-    .difference_replacements{
-      grid-row: 10/11;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-      padding-top: 30px;
-    }
-
-    .difference_cost_purchase{
-      grid-row: 11/12;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-    }
-
-    .difference_cost_consumption_one{
-      grid-row: 12/13;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-    }
-
-    .difference_cost_total{
-      grid-row: 13/14;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-      padding-top: 40px;
-      border-bottom: 20px solid $blue;
-    }
-    
-    .difference_co_material{
-      grid-row: 14/15;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-      padding-top: 30px;
-    }
-
-    .difference_cost_consumption{
-      grid-row: 15/16;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-    }
-
-    .difference_co_total{
-      grid-row: 16/17;
-      grid-column: 3;
-      background-color: white;
-      color: $text;
-      padding-top: 40px;
-    }
+  #sectionThree hr {
+    display: none;
+  }
+  #result {
+    -ms-grid-columns: 40% 30% 30%;
+        grid-template-columns: 40% 30% 30%;
+    -ms-grid-rows: 50px 70px 70px 50px 90px 120px 70px 70px 100px 70px 50px 50px 100px 70px 50px 90px;
+        grid-template-rows: 50px 70px 70px 50px 90px 120px 70px 70px 100px 70px 50px 50px 100px 70px 50px 90px;
+  }
+  #result .mobile {
+    display: block;
+    text-align: left;
+  }
+  #result label {
+    text-align: left;
+    padding-left: 20px;
+  }
+  #result label.replacements {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  #result .current_object {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  #result .new_object {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #result .current_replacements {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  #result .new_replacements {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #result label.price {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  #result .current_cost_purchase {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  #result .new_cost_purchase {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #result label.usageOne {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  #result .current_cost_consumption_one {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  #result .new_cost_consumption_one {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #result label.totalOne {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-top: 40px;
+  }
+  #result .current_cost_total {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin-top: 40px;
+  }
+  #result .new_cost_total {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    margin-top: 40px;
+  }
+  #result label.material {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-top: 50px;
+  }
+  #result .current_co_material {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin-top: 50px;
+  }
+  #result .new_co_material {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    margin-top: 50px;
+  }
+  #result label.usageTwo {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  #result .current_cost_consumption {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  #result .new_cost_consumption {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #result label.totalTwo {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-top: 20px;
+  }
+  #result .current_co_total {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin-top: 20px;
+  }
+  #result .new_co_total {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    margin-top: 20px;
+  }
+  #result .difference_object {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9/10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 50px;
+    background-color: white;
+    color: #000000;
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+  #result .replacements {
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10/11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  #result .cost_purchase {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: 11/12;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  #result .cost_consumption_one {
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 1;
+    grid-row: 12/13;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  #result .cost_total {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 1;
+    grid-row: 13/14;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 10px;
+    padding-top: 40px;
+    font-weight: 800;
+    border-bottom: 20px solid #283991;
+    padding-left: 20px;
+  }
+  #result .co_material {
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 1;
+    grid-row: 14/15;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  #result .cost_consumption {
+    -ms-grid-row: 15;
+    -ms-grid-row-span: 1;
+    grid-row: 15/16;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  #result .co_total {
+    -ms-grid-row: 16;
+    -ms-grid-row-span: 1;
+    grid-row: 16/17;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    background-color: white;
+    color: #000000;
+    padding-top: 40px;
+    font-weight: 800;
+    padding-left: 20px;
+  }
+  #result .difference_replacements {
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10/11;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+    padding-top: 30px;
+  }
+  #result .difference_cost_purchase {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: 11/12;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+  }
+  #result .difference_cost_consumption_one {
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 1;
+    grid-row: 12/13;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+  }
+  #result .difference_cost_total {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 1;
+    grid-row: 13/14;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+    padding-top: 40px;
+    border-bottom: 20px solid #283991;
+  }
+  #result .difference_co_material {
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 1;
+    grid-row: 14/15;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+    padding-top: 30px;
+  }
+  #result .difference_cost_consumption {
+    -ms-grid-row: 15;
+    -ms-grid-row-span: 1;
+    grid-row: 15/16;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+  }
+  #result .difference_co_total {
+    -ms-grid-row: 16;
+    -ms-grid-row-span: 1;
+    grid-row: 16/17;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    background-color: white;
+    color: #000000;
+    padding-top: 40px;
   }
 }
 
-
 /*------ SECTION 3 - EXTENDED DESKTOP------*/
+#wrapper--dark {
+  background-color: #eaebed;
+  width: 80%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 50px;
+  display: none;
+}
 
-#wrapper--dark{
-    background-color: $background--dark;
-    width: 80%;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-    display: none;
-  
-    #arrow--div{
-        display: flex;
-        justify-content: space-between;
-        height: 50px;
-        align-items: center;
-        padding-left: 50px;
-        padding-right: 50px;
-        box-shadow: 0 10px 10px -5px #e4e4e4;
-        cursor: pointer;
+#wrapper--dark #arrow--div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  -webkit-box-shadow: 0 10px 10px -5px #e4e4e4;
+          box-shadow: 0 10px 10px -5px #e4e4e4;
+  cursor: pointer;
+}
 
-        img{
-            width: 15px;
-            margin-top: 10px;
-        }
+#wrapper--dark #arrow--div img {
+  width: 15px;
+  margin-top: 10px;
+}
 
-        .example {
-            transform: rotate(90deg) !important;
-            -webkit-transform: rotate(90deg) !important;
-            -moz-transform: rotate(90deg) !important;
-            -o-transform: rotate(90deg) !important;
-            -ms-transform: rotate(90deg) !important;
-        }
+#wrapper--dark #arrow--div .example {
+  transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg) !important;
+  -moz-transform: rotate(90deg) !important;
+  -o-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
+}
 
-        p{
-            display: inline;
-        }
+#wrapper--dark #arrow--div p {
+  display: inline;
+}
 
-        .arrow{
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            height: 30px;
-            width: 40px;
-            display: inline;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
-            transform: rotate(-90deg);
-        }
-       
-    }
+#wrapper--dark #arrow--div .arrow {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 30px;
+  width: 40px;
+  display: inline;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
 
-    .container {
-        padding-left: 50px;
-        padding-right: 50px;
-        margin-top: 50px;
-        padding-bottom: 50px;
+#wrapper--dark .container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
 
-        h2{
-            margin-bottom: 10px;
-        }
-        
-        .content{
-        display: flex;
+#wrapper--dark .container h2 {
+  margin-bottom: 10px;
+}
 
-            .column {
-                justify-content: space-around;
-                
-             
-                
-                p{
-                    margin-right: 30px;
-                }
+#wrapper--dark .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
-               img {
-                    width: 90%;
-                    padding-top: 30px;
-               }
-            }  
+#wrapper--dark .container .content .column {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 
-            .column-50 {
-                width: 50%;
-            }
-        }
-        .tree_container{
-          display: flex;
-          .treeText{
-            width: 60%;
-          }
-          .treeImg{
-            margin: 0 auto;
-          }
-        }
-    }
+#wrapper--dark .container .content .column p {
+  margin-right: 30px;
+}
+
+#wrapper--dark .container .content .column img {
+  width: 90%;
+  padding-top: 30px;
+}
+
+#wrapper--dark .container .content .column-50 {
+  width: 50%;
+}
+
+#wrapper--dark .container .tree_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper--dark .container .tree_container .treeText {
+  width: 60%;
+}
+
+#wrapper--dark .container .tree_container .treeImg {
+  margin: 0 auto;
 }
 
 /*------ SECTION 3 - EXTENDED MOBILE ------*/
-
-@media (max-width: 650px){
-    #wrapper--dark{
-    
-        .container {
-            padding-left: 15px;
-            padding-right: 15px;
-            margin-top: 15px;
-            padding-bottom: 15px;
-    
-            h2{
-                margin-bottom: 15px;
-            }
-            
-            .content{
-            display: flex;
+@media (max-width: 650px) {
+  #wrapper--dark .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+  #wrapper--dark .container h2 {
+    margin-bottom: 15px;
+  }
+  #wrapper--dark .container .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
             flex-direction: column;
-    
-                .column {
-                    
-                    p{
-                        margin-right: 10px;
-                    }
-
-                    img {
-                        width: 100%;
-                        padding-top: 15px;
-                    }
-                }  
-
-                .column-50 {
-                    width: 100%;
-                }
-            }
-        }
-    }
+  }
+  #wrapper--dark .container .content .column p {
+    margin-right: 10px;
+  }
+  #wrapper--dark .container .content .column img {
+    width: 100%;
+    padding-top: 15px;
+  }
+  #wrapper--dark .container .content .column-50 {
+    width: 100%;
+  }
 }
 
-//Professor
-
 .clip {
-    position:fixed;
-	width:100px;
-	height:100px;
-	bottom:40px;
-	right:20px;
-    background-image: url(../img/prof.svg);
-    background-position: -30px -500px;
-    clip-path: circle(100px at center);
-
-    color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 40px;
+  right: 20px;
+  background-image: url(../img/prof.svg);
+  background-position: -30px -500px;
+  -webkit-clip-path: circle(100px at center);
+          clip-path: circle(100px at center);
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
+          filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
   pointer-events: none;
 }
 
 .notification {
-    position:fixed;
-	width:100px;
-	height:100px;
-	bottom: 90px;
-	right: -10px;
-    background-image: url(../img/notification.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    clip-path: circle(100px at center);
-display: none;
-    color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271))
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 90px;
+  right: -10px;
+  background-image: url(../img/notification.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-clip-path: circle(100px at center);
+          clip-path: circle(100px at center);
+  display: none;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
+          filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
 }
 
 /*------ POP-UP ------*/
-
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 30px;
-    padding-top: 10px;
-    border: 1px solid #888;
-    width: 80%;
-  
-    p{
-      padding-top: 40px;
-      padding-bottom: 30px;
-    }
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 
-    button{
-      color: white;
-      display: none;
-    }
-  }
-  
-  /* The Close Button */
-  .close {
-    display: block;
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  padding-top: 10px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content p {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.modal-content button {
+  color: white;
+  display: none;
+}
+
+/* The Close Button */
+.close {
+  display: block;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

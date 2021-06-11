@@ -1,0 +1,1482 @@
+/*--------- COLORS ---------*/
+
+$blue: #283991;
+$orange: #DE7D2F;
+$text: #000000; 
+$background: #F5F5F5;
+$shadow: #E3E3E3;
+$background--dark: #eaebed; 
+
+/*--------- MAIN ---------*/
+
+.cancel{
+  background-color: white;
+  color: $blue !important;
+  border: 2px solid $blue;
+}
+
+span{
+  font-size: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h3{
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.label_new_price,
+      .label_new_age,
+      .label_new_lifespan,
+      .label_new_wattage,
+      .label_new_daily_usage,
+      .label_new_kwh {
+        display: none;
+      }
+
+
+/*--------- BUTTONS ---------*/
+
+button{
+    background-color: $blue;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 10px; 
+}
+
+.arrow{
+    background-color: $background--dark;
+    color: $text;
+    font-size: larger;
+    padding: 20px 50px;
+    border: none;
+}
+
+
+/*--------- INPUT ---------*/
+
+input,
+select {
+    background-color: white;
+    border: none;
+    height: 30px;
+    // width: 100px;
+    border-radius: 6px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 0 1em;
+}
+
+// Style for checkbox
+input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+}
+
+
+/*--------- HEADER ---------*/
+
+h1{
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-weight: 600;
+    max-width: 1280px;
+    width: 80%;
+}
+
+header{
+    padding: 0 20px;
+    box-shadow: 0 4px 15px 0px #ededed;
+
+    img{
+        width: 85px;
+        padding: 8px 0;
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        overflow: hidden;
+        padding: 30px 0;
+
+        h1{
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2{
+            font-weight: 300;
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+
+/*--------- SECTION ONE ---------*/
+
+#sectionOne{
+    width: 80%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 75px;
+    overflow: auto;
+    background-color: $blue;
+    margin-bottom: 30px;
+    color: white;
+
+    .info{
+        width: 60%;
+        padding: 30px 50px;
+        box-sizing: border-box;
+        float: left;
+    }
+
+    .settings{
+        width: 40%;
+        padding: 30px 50px; 
+        box-sizing: border-box;
+        float: left;
+        border-left: 30px solid white;
+
+        .option{
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: space-between;
+            
+            input{
+                width: 120px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #sectionOne{
+      margin-bottom: 0;
+
+        .info{
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .settings{
+            width: 100%;
+            border-left: none;
+            background-color: $blue;
+            color: white;
+        }
+    }
+}
+
+
+/*------ SECTION 2 ------*/
+
+#wrapper_grid {
+    background-color: $background;
+    width: 80%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 50px;
+    box-sizing: border-box;
+  
+    display: grid;
+    grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+    grid-template-rows: 3em 2em 3em 4em 2em 1em 4em 3em;
+  
+    .comparison_select-group-grid {
+      grid-column: 1 / 10;
+      grid-row: 1 / 2;
+      background-color: #F5F5F5;
+  
+      display: grid;
+      grid-template-columns: 45% 10% 45%;
+  
+      .comparison_select_machine {
+        grid-column: 1 / 3;
+  
+        label {
+          margin-right: 10px;
+        }
+      }
+      .comparison_amount_machines {
+        grid-column: 3 / 4;
+        input {
+          text-align: center;
+        }
+      }
+    }
+  
+    /*------ GENERAL LABELS ------*/
+  
+    .label_price_wrapper,
+    .label_age_wrapper,
+    .label_lifespan_wrapper,
+    .label_wattage_wrapper,
+    .label_daily_usage_wrapper,
+    .label_kwh_wrapper {
+      grid-row: 3 / 4;
+      text-align: center;
+      opacity: .5;
+      
+      span{
+        font-size: 12px;
+      }
+    }
+    .label_price_wrapper {
+      grid-column: 3 / 4;
+    }
+    .label_age_wrapper {
+      grid-column: 4 / 5;
+    }
+    .label_lifespan_wrapper {
+      grid-column: 5 / 6;
+    }
+    .label_wattage_wrapper {
+      grid-column: 7 / 8;
+    }
+    .label_daily_usage_wrapper {
+      grid-column: 8 / 9;
+    }
+    .label_kwh_wrapper {
+      grid-column: 9 /10;
+    }
+  
+    .seporator {
+      grid-column: 1 / 10;
+      align-self: center;
+    }
+    .upper_seporator {
+      grid-row: 2 / 3;
+    }
+    .lower_seporator {
+      // Leave comment below for later styleing
+      // grid-column-start: 2;
+      grid-row: 5 / 6;
+    }
+  
+    // old current situation group
+    .select_current {
+      grid-row: 4 / 5;
+      grid-column: 1 / 10;
+      display: grid;
+      opacity: .5;
+      // border: 1px solid black;
+      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+      .select_current_situation {
+        grid-column: 1 / 2;
+        .label_current_situation {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 0.5em;
+        }
+        .current_situation {
+          width: 100%;
+        }
+      }
+      .input_current_price_wrapper {
+        grid-column: 3 / 4;
+      }
+      .input_current_age_wrapper {
+        grid-column: 4 / 5;
+      }
+      .input_current_lifespan_wrapper {
+        grid-column: 5 / 6;
+      }
+      .input_current_wattage_wrapper {
+        grid-column: 7 / 8;
+      }
+      .input_current_usage_wrapper {
+        grid-column: 8 / 9;
+      }
+      .input_current_kwh_wrapper {
+        grid-column: 9 / 10;
+      }
+  
+      .label_current_price,
+      .label_current_age,
+      .label_current_lifespan,
+      .label_current_wattage,
+      .label_current_daily_usage,
+      .label_current_kwh {
+        display: none;
+      }
+    }
+  
+    // old new situation group
+    .select_new {
+      grid-row: 7 / 8;
+      grid-column: 1 / 10;
+      display: grid;
+      grid-template-columns: 12% 8% 12% 12% 12% 8% 12% 12% 12%;
+      opacity: .5;
+  
+      .select_new_situation {
+        grid-column: 1 / 2;
+        .label_new_situation {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 0.5em;
+        }
+        .new_situation {
+          width: 100%;
+        }
+      }
+      .input_new_price_wrapper {
+        grid-column: 3 / 4;
+      }
+      .input_new_age_wrapper {
+        grid-column: 4 / 5;
+      }
+      .input_new_lifespan_wrapper {
+        grid-column: 5 / 6;
+      }
+      .input_new_wattage_wrapper {
+        grid-column: 7 / 8;
+      }
+      .input_new_usage_wrapper {
+        grid-column: 8 / 9;
+      }
+      .input_new_kwh_wrapper {
+        grid-column: 9 / 10;
+      }
+    }
+  
+    .input_current_price_wrapper,
+    .input_current_age_wrapper,
+    .input_current_lifespan_wrapper,
+    .input_current_wattage_wrapper,
+    .input_current_usage_wrapper,
+    .input_current_kwh_wrapper,
+    .input_new_price_wrapper,
+    .input_new_age_wrapper,
+    .input_new_lifespan_wrapper,
+    .input_new_wattage_wrapper,
+    .input_new_usage_wrapper,
+    .input_new_kwh_wrapper {
+      input {
+        display: block;
+        margin: 2em auto 0 auto;
+        width: 85%;
+        text-align: center;
+      }
+    }
+  
+    .change_end_of_life_group-grid {
+      grid-column: 5 / 10;
+      grid-row: 8 / 9;
+      display: flex;
+      justify-content: flex-end;
+      .end_of_life,
+      .label_end_of_life {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .select_new_situation,
+  .input_new_price_wrapper,
+  .input_new_age_wrapper,
+  .input_new_lifespan_wrapper,
+  .input_new_wattage_wrapper,
+  .input_new_usage_wrapper,
+  .input_new_kwh_wrapper {
+      text-align: center;
+    }
+  
+
+
+  /*------ SECTION 2 - MEDIAQUERY ------*/
+@media only screen and (max-width: 1334px) {
+
+  .break{
+    display: none;
+  }
+
+    #wrapper_grid {
+      width: 80%;
+      display: block;
+      background-color: white;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      input,
+      select {
+        border: 1px solid black;
+      }
+      .comparison_select-group-grid {
+        grid-template-columns: 50% 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        
+
+        .comparison_select_machine {
+
+          label {
+            font-size: 0.8em;
+            margin-left: 1em;
+          }
+          select {
+            width: 80%;
+            margin-top: 0.8em;
+            margin-left: 1em;
+          }
+        }
+        .comparison_amount_machines {
+          grid-column: 1 / 3;
+          margin-top: 30px;
+
+          label {
+            font-size: 0.8em;
+            margin-left: 1em;
+          }
+          input {
+            width: 80%;
+            border: 1px solid #000000;
+            margin-top: 0.8em;
+            margin-left: 1em;
+          }
+        }
+      }
+      .seporator,
+      .label_price_wrapper,
+      .label_age_wrapper,
+      .label_lifespan_wrapper,
+      .label_wattage_wrapper,
+      .label_daily_usage_wrapper,
+      .label_kwh_wrapper {
+        display: none;
+      }
+      .select_current {
+        background-color: $blue;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2em 6em 7em 7em 7em 5em 2em;
+        padding-left: 20px;
+        .select_current_situation {
+          grid-column: 1/ 2;
+          grid-row: 2 /3;
+          color: #fff;
+          .current_situation {
+            width: 10em;
+          }
+        }
+        .input_current_price_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 3 / 4;
+        }
+        .input_current_age_wrapper {
+          grid-column: 2/ 3;
+          grid-row: 3 / 4;
+        }
+        .input_current_lifespan_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 4 / 5;
+        }
+  
+        .input_current_wattage_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 5 / 6;
+        }
+        .input_current_usage_wrapper {
+          grid-column: 2/ 3;
+          grid-row: 5 / 6;
+        }
+        .input_current_kwh_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 6 / 7;
+        }
+  
+        .select_current_situation,
+        .input_current_price_wrapper,
+        .input_current_age_wrapper,
+        .input_current_lifespan_wrapper,
+        .input_current_wattage_wrapper,
+        .input_current_usage_wrapper,
+        .input_current_kwh_wrapper {
+          label {
+            font-weight: 500;
+            color: #fff;
+          }
+          input {
+            margin: 0;
+            margin-top: 0.7em;
+            width: 10em;
+          }
+        }
+        .label_current_price,
+        .label_current_age,
+        .label_current_lifespan,
+        .label_current_wattage,
+        .label_current_daily_usage,
+        .label_current_kwh {
+          display: block;
+        }
+      }
+      .select_new {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2em 6em 7em 7em 7em 5em 0.5em;
+        padding-left: 20px;
+        background-color: #F5F5F5;
+        .select_new_situation {
+          grid-column: 1/ 2;
+          grid-row: 2 /3;
+          color: #000;
+          .new_situation {
+            width: 10em;
+          }
+        }
+        .input_new_price_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 3 / 4;
+        }
+        .input_new_age_wrapper {
+          grid-column: 2/ 3;
+          grid-row: 3 / 4;
+        }
+        .input_new_lifespan_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 4 / 5;
+        }
+  
+        .input_new_wattage_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 5 / 6;
+        }
+        .input_new_usage_wrapper {
+          grid-column: 2/ 3;
+          grid-row: 5 / 6;
+        }
+        .input_new_kwh_wrapper {
+          grid-column: 1/ 2;
+          grid-row: 6 / 7;
+        }
+
+
+        .select_new_situation,
+        .input_new_price_wrapper,
+        .input_new_age_wrapper,
+        .input_new_lifespan_wrapper,
+        .input_new_wattage_wrapper,
+        .input_new_usage_wrapper,
+        .input_new_kwh_wrapper {
+          label {
+            font-weight: 500;
+            color: #000;
+          }
+          input {
+            margin: 0;
+            margin-top: 0.7em;
+            width: 10em;
+          }
+        }
+        .label_new_price,
+        .label_new_age,
+        .label_new_lifespan,
+        .label_new_wattage,
+        .label_new_daily_usage,
+        .label_new_kwh {
+          display: block;
+        }
+      }
+      .change_end_of_life_group-grid {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        background-color: #F5F5F5;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        padding-top: 30px;
+  
+        .label_end_of_life {
+          font-size: 0.8em;
+          vertical-align: 0.15em;
+        }
+      }
+    }
+
+    .select_new_situation,
+  .input_new_price_wrapper,
+  .input_new_age_wrapper,
+  .input_new_lifespan_wrapper,
+  .input_new_wattage_wrapper,
+  .input_new_usage_wrapper,
+  .input_new_kwh_wrapper {
+      text-align: left;
+    }
+  
+  }
+
+/*------ SECTION 3 - RESULTAAT ------*/
+
+#sectionThree{
+    background-color: $blue;
+    width: 80%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    color: white;
+    display: none;
+}
+
+#result{
+    display: grid;
+    grid-template-columns: 10% 20% 5% 10% 10% 10% 5% 10% 10% 10%;
+    grid-template-rows: 80px 50px 50px 30px 50px;
+    gap: 0px 0px;
+    text-align: center;
+    padding-bottom: 30px;
+
+    .mobile{
+      display: none;
+    }
+
+    hr{
+        border-top: 1px solid white;
+    }
+
+    // LINES
+    .line.one{
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        padding-top: 8px;
+    }
+
+    .line.two{
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        padding-top: 8px;
+    }
+    
+    .line.three{
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+        padding-top: 8px;
+    }
+
+    .line.four{
+        grid-row: 4 / 5;
+        grid-column: 4 / 5;
+        padding-top: 8px;
+    }
+
+    .line.five{
+        grid-row: 4 / 5;
+        grid-column: 5 / 6;
+        padding-top: 8px;
+    }
+
+    .line.six{
+        grid-row: 4 / 5;
+        grid-column: 6 / 7;
+        padding-top: 8px;
+        background-color: white;
+    }
+
+    .line.seven{
+        grid-row: 4 / 5;
+        grid-column: 7 / 8;
+        padding-top: 8px;
+    }
+
+    .line.eight{
+        grid-row: 4 / 5;
+        grid-column: 8 / 9;
+        padding-top: 8px;
+    }
+
+    .line.nine{
+        grid-row: 4 / 5;
+        grid-column: 9 / 10;
+        padding-top: 8px;
+    }
+
+    .line.ten{
+        grid-row: 4 / 5;
+        grid-column: 10 / 11;
+        padding-top: 8px;
+        background-color: white;
+    }
+
+    //ROW ONE
+
+    label.replacements{
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        padding-top: 15px;
+        background-color: $blue;
+        color: white;
+    }
+
+    label.price{
+        grid-row: 1 / 2;
+        grid-column: 4 / 5;
+        padding-top: 15px;
+    }
+
+    label.usageOne{
+        grid-row: 1 / 2;
+        grid-column: 5 / 6;
+        padding-top: 15px;
+    }
+
+    label.totalOne{
+        grid-row: 1 / 2;
+        grid-column: 6 / 7;
+        background-color: white;
+        padding-top: 15px;
+        color: $text;
+    }
+
+    label.material{
+        grid-row: 1 / 2;
+        grid-column: 8 / 9;
+        padding-top: 15px;
+    }
+
+    label.usageTwo{
+        grid-row: 1 / 2;
+        grid-column: 9 / 10;
+        padding-top: 15px;
+    }
+
+    label.totalTwo{
+        grid-row: 1 / 2;
+        grid-column: 10 / 11;
+        padding-top: 15px;
+        background-color: white;
+        color: $text;
+    }
+
+    //ROW TWO
+
+    .current_object{
+        grid-row: 2 / 3;
+        padding-top: 15px;
+    }
+
+    .current_replacements{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        padding-top: 15px;
+    }
+
+    .current_cost_purchase{
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+        padding-top: 15px;
+    }
+
+    .current_cost_consumption_one{
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+        padding-top: 15px;
+    }
+
+    .current_cost_total{
+        grid-row: 2 / 3;
+        grid-column: 6 / 7;
+        background-color: white;
+        padding-top: 15px;
+        color: $text;
+    }
+
+    .current_co_material{
+        grid-row: 2 / 3;
+        grid-column: 8 / 9;
+        padding-top: 15px;
+    }
+
+    .current_cost_consumption{
+        grid-row: 2 / 3;
+        grid-column: 9 / 10;
+        padding-top: 15px;
+    }
+
+    .current_co_total{
+        grid-row: 2 / 3;
+        grid-column: 10 / 11;
+        padding-top: 15px;
+        background-color: white;
+        color: $text;
+    }
+
+    //ROW THREE
+
+    .new_object{
+        grid-row: 3 / 4;
+        padding-top: 15px;
+    }
+
+    .new_replacements{
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        padding-top: 15px;
+    }
+
+    .new_cost_purchase{
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+        padding-top: 15px;
+    }
+
+    .new_cost_consumption_one{
+        grid-row: 3 / 4;
+        grid-column: 5 / 6;
+        padding-top: 15px;
+    }
+
+    .new_cost_total{
+        grid-row: 3 / 4;
+        grid-column: 6 / 7;
+        background-color: white;
+        padding-top: 15px;
+        color: $text;
+    }
+
+    .new_co_material{
+        grid-row: 3 / 4;
+        grid-column: 8 / 9;
+        padding-top: 15px;
+    }
+
+    .new_cost_consumption{
+        grid-row: 3 / 4;
+        grid-column: 9 / 10;
+        padding-top: 15px;
+    }
+
+    .new_co_total{
+        grid-row: 3 / 4;
+        grid-column: 10 / 11;
+        padding-top: 15px;
+        background-color: white;
+        color: $text;
+    }
+
+    //ROW FOUR
+
+    .difference_object{
+        grid-row: 5 / 6;
+        padding-top: 15px;
+    }
+
+    .difference_replacements{
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+        padding-top: 15px;
+    }
+
+    .difference_cost_purchase{
+        grid-row: 5 / 6;
+        grid-column: 4 / 5;
+        padding-top: 15px;
+    }
+
+    .difference_cost_consumption_one{
+        grid-row: 5 / 6;
+        grid-column: 5 / 6;
+        padding-top: 15px;
+    }
+
+    .difference_cost_total{
+        grid-row: 5 / 6;
+        grid-column: 6 / 7;
+        background-color: white;
+        padding-top: 15px;
+        color: $text;
+        color: $text;
+    }
+
+    .difference_co_material{
+        grid-row: 5 / 6;
+        grid-column: 8 / 9;
+        padding-top: 15px;
+    }
+
+    .difference_cost_consumption{
+        grid-row: 5 / 6;
+        grid-column: 9 / 10;
+        padding-top: 15px;
+    }
+
+    .difference_co_total{
+        grid-row: 5 / 6;
+        grid-column: 10 / 11;
+        padding-top: 15px;
+        background-color: white;
+        color: $text;
+    }
+}
+
+@media only screen and (max-width: 1334px) {
+
+  span{
+    font-weight: 500;
+  }
+
+  #sectionThree{
+    padding: 30px 20px;
+
+    hr{
+      display: none;
+    }
+  }
+
+  #result{
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 50px 70px 70px 50px 90px 120px 70px 70px 100px 70px 50px 50px 100px 70px 50px 90px;
+
+    .mobile{
+      display: block;
+      text-align: left;
+    }
+
+    label{
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    label.replacements{
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    .current_object{
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+
+    .new_object{
+      grid-row: 1/2;
+      grid-column: 3;
+    }
+
+    .current_replacements{
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+
+    .new_replacements{
+      grid-row: 2/3;
+      grid-column: 3;
+    }
+
+    label.price{
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+
+    .current_cost_purchase{
+      grid-row: 3/4;
+      grid-column: 2/3;
+    }
+
+    .new_cost_purchase{
+      grid-row: 3/4;
+      grid-column: 3;
+    }
+
+    label.usageOne{
+      grid-row: 4/5;
+      grid-column: 1/2;
+    }
+
+    .current_cost_consumption_one{
+      grid-row: 4/5;
+      grid-column: 2/3;
+    }
+
+    .new_cost_consumption_one{
+      grid-row: 4/5;
+      grid-column: 3;
+    }
+
+    label.totalOne{
+      grid-row: 5/6;
+      grid-column: 1/2;
+      margin-top: 40px;
+    }
+
+    .current_cost_total{
+      grid-row: 5/6;
+      grid-column: 2/3;
+      margin-top: 40px;
+    }
+
+    .new_cost_total{
+      grid-row: 5/6;
+      grid-column: 3;
+      margin-top: 40px;
+    }
+
+    // SECTION 2
+
+    label.material{
+      grid-row: 6/7;
+      grid-column: 1/2;
+      margin-top: 50px;
+    }
+
+    .current_co_material{
+      grid-row: 6/7;
+      grid-column: 2/3;
+      margin-top: 50px;
+    }
+
+    .new_co_material{
+      grid-row: 6/7;
+      grid-column: 3;
+      margin-top: 50px;
+    }
+
+    label.usageTwo{
+      grid-row: 7/8;
+      grid-column: 1/2;
+    }
+
+    .current_cost_consumption{
+      grid-row: 7/8;
+      grid-column: 2/3;
+    }
+
+    .new_cost_consumption{
+      grid-row: 7/8;
+      grid-column: 3;
+    }
+
+    label.totalTwo{
+      grid-row: 8/9;
+      grid-column: 1/2;
+      margin-top: 20px;
+    }
+
+    .current_co_total{
+      grid-row: 8/9;
+      grid-column: 2/3;
+      margin-top: 20px;
+    }
+
+    .new_co_total{
+      grid-row: 8/9;
+      grid-column: 3;
+      margin-top: 20px;
+    }
+
+    // DIFFERENCE
+
+    .difference_object{
+      grid-row: 9/10;
+      grid-column: 1/4;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 800;
+      margin-top: 50px;
+      background-color: white;
+      color: $text;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
+
+    .replacements{
+      grid-row: 10/11;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+
+    .cost_purchase{
+      grid-row: 11/12;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .cost_consumption_one{
+      grid-row: 12/13;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .cost_total{
+      grid-row: 13/14;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 10px;
+      padding-top: 40px;
+      font-weight: 800;
+      border-bottom: 20px solid $blue;
+      padding-left: 20px;
+    }
+
+    .co_material{
+      grid-row: 14/15;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+
+    .cost_consumption{
+      grid-row: 15/16;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .co_total{
+      grid-row: 16/17;
+      grid-column: 1/4;
+      background-color: white;
+      color: $text;
+      padding-top: 40px;
+      font-weight: 800;
+      padding-left: 20px;
+    }
+
+    .difference_replacements{
+      grid-row: 10/11;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+      padding-top: 30px;
+    }
+
+    .difference_cost_purchase{
+      grid-row: 11/12;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+    }
+
+    .difference_cost_consumption_one{
+      grid-row: 12/13;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+    }
+
+    .difference_cost_total{
+      grid-row: 13/14;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+      padding-top: 40px;
+      border-bottom: 20px solid $blue;
+    }
+    
+    .difference_co_material{
+      grid-row: 14/15;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+      padding-top: 30px;
+    }
+
+    .difference_cost_consumption{
+      grid-row: 15/16;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+    }
+
+    .difference_co_total{
+      grid-row: 16/17;
+      grid-column: 3;
+      background-color: white;
+      color: $text;
+      padding-top: 40px;
+    }
+  }
+}
+
+
+/*------ SECTION 3 - EXTENDED DESKTOP------*/
+
+#wrapper--dark{
+    background-color: $background--dark;
+    width: 80%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    display: none;
+  
+    #arrow--div{
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        box-shadow: 0 10px 10px -5px #e4e4e4;
+        cursor: pointer;
+
+        img{
+            width: 15px;
+            margin-top: 10px;
+        }
+
+        .example {
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -moz-transform: rotate(90deg) !important;
+            -o-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+        }
+
+        p{
+            display: inline;
+        }
+
+        .arrow{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 30px;
+            width: 40px;
+            display: inline;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+            transform: rotate(-90deg);
+        }
+       
+    }
+
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 50px;
+        padding-bottom: 50px;
+
+        h2{
+            margin-bottom: 10px;
+        }
+        
+        .content{
+        display: flex;
+
+            .column {
+                justify-content: space-around;
+                
+             
+                
+                p{
+                    margin-right: 30px;
+                }
+
+               img {
+                    width: 90%;
+                    padding-top: 30px;
+               }
+            }  
+
+            .column-50 {
+                width: 50%;
+            }
+        }
+        .tree_container{
+          display: flex;
+          .treeText{
+            width: 60%;
+          }
+          .treeImg{
+            margin: 0 auto;
+          }
+        }
+    }
+}
+
+/*------ SECTION 3 - EXTENDED MOBILE ------*/
+
+@media (max-width: 650px){
+    #wrapper--dark{
+    
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 15px;
+            padding-bottom: 15px;
+    
+            h2{
+                margin-bottom: 15px;
+            }
+            
+            .content{
+            display: flex;
+            flex-direction: column;
+    
+                .column {
+                    
+                    p{
+                        margin-right: 10px;
+                    }
+
+                    img {
+                        width: 100%;
+                        padding-top: 15px;
+                    }
+                }  
+
+                .column-50 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//Professor
+
+.clip {
+    position:fixed;
+	width:100px;
+	height:100px;
+	bottom:40px;
+	right:20px;
+    background-image: url(../img/prof.svg);
+    background-position: -30px -500px;
+    clip-path: circle(100px at center);
+
+    color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271));
+  pointer-events: none;
+}
+
+.notification {
+    position:fixed;
+	width:100px;
+	height:100px;
+	bottom: 90px;
+	right: -10px;
+    background-image: url(../img/notification.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: circle(100px at center);
+display: none;
+    color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.271))
+}
+
+/*------ POP-UP ------*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    padding-top: 10px;
+    border: 1px solid #888;
+    width: 80%;
+  
+    p{
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    button{
+      color: white;
+      display: none;
+    }
+  }
+  
+  /* The Close Button */
+  .close {
+    display: block;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

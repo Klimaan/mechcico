@@ -7,7 +7,8 @@ a project of [Thomas More Mechelen](https://www.thomasmore.be/).
 More about the MechCiCo project on: https://klimaan.be/project/mechcico/
 
 This tool should be run on a webserver, to load the javascript files correctly.
-A simple [Node.js](https://nodejs.org/en/) http server suffice.
+A simple [Node.js](https://nodejs.org/en/) 
+[http-server](https://github.com/http-party/http-server#readme) suffice.
 
 ```
 npm install http-server -g
